@@ -1,0 +1,13 @@
+import Header from '../components/Header'
+
+export default function Home() {
+  return (
+    <div className="bg-vintage-pattern min-h-screen text-brown-900">
+      <Header />
+      <main className="p-8 text-center">
+        <h1 className="text-4xl font-serif mb-4">Bem-vindo ao ArqVintage 🏛️</h1>
+        <p className="text-lg">Organize, decore e inspire-se com inteligência artificial</p>
+      </main>
+    </div>
+  )
+}
