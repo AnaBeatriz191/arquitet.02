@@ -1,0 +1,13 @@
+export default function Header() {
+  return (
+    <header className="bg-brown-800 text-white p-4 flex justify-between items-center">
+      <h2 className="text-2xl font-serif">ArqVintage</h2>
+      <nav className="space-x-4">
+        <a href="/ambiente">Ambiente</a>
+        <a href="/objetos">Objetos</a>
+        <a href="/sugestoes">Sugestões</a>
+        <a href="/comunidade">Comunidade</a>
+      </nav>
+    </header>
+  )
+}
