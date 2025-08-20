@@ -1,0 +1,27 @@
+import { useState } from 'react'
+
+export default function AmbienteForm() {
+  const [ambiente, setAmbiente] = useState({
+    largura: '',
+    comprimento: '',
+    altura: '',
+    detalhes: '',
+    imagem: ''
+  })
+
+  const handleChange = (e: any) => {
+    setAmbiente({ ...ambiente, [e.target.name]: e.target.value })
+  }
+
+  return (
+    <form className="bg-white p-6 rounded shadow-md max-w-xl mx-auto mt-8">
+      <h3 className="text-2xl font-serif mb-4">Cadastrar Ambiente</h3>
+      <input name="largura" placeholder="Largura (m)" onChange={handleChange} className="input" />
+      <input name="comprimento" placeholder="Comprimento (m)" onChange={handleChange} className="input" />
+      <input name="altura" placeholder="Altura (m)" onChange={handleChange} className="input" />
+      <textarea name="detalhes" placeholder="Detalhes (janelas, portas...)" onChange={handleChange} className="input" />
+      <input type="file" name="imagem" className="input" />
+      <button className="bg-brown-700 text-white px-4 py-2 mt-4">Salvar</button>
+    </form>
+  )
+}
